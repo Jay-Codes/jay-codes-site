@@ -1,0 +1,113 @@
+.i{
+    display: flex;
+    height:100vh;
+    /* background-color: #00ffff; */
+}
+.i-left{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.i-right{
+    flex:1;
+    position: relative;
+}
+.i-intro{
+    font-size: 30px;
+    font-weight: 300;
+    align-items: center;
+}
+.i-left-wrapper{
+    padding:50px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.i-name{
+    font-size: 60px;
+}
+.i-title{
+    height:40px;
+    overflow: hidden;
+}
+.i-title-item{
+    height:40px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #59b256;
+    display: flex;
+    align-items: center;
+}
+.i-title-wrapper{
+    height:100%;
+    animation: move 7s ease-in-out infinite alternate;
+}
+@keyframes move {
+    25%{
+        transform: translateY(-40px);
+    }
+    50%{
+        transform: translateY(-80px);
+    }
+    75%{
+        transform: translateY(-120px);
+    }
+    100%{
+        transform: translateY(-160px);
+    }
+}
+.i-img{
+    width: 100%;
+    height: 200%;
+    object-fit: contain;
+    clip-path: polygon(29% 12%, 23% 29%, 30% 50%, 30% 66%, 38% 71%, 50% 70%, 65% 69%, 72% 62%, 72% 49%, 80% 26%, 69% 11%, 50% 7%);
+    position: absolute;
+    top: -300px;;
+}   
+.i-bg{
+    height:100%;
+    width :100%;
+    /* clip-path: polygon(25% 0%, 78% 0, 78% 100%, 25% 100%, 0% 50%); */
+    /* clip-path: polygon(86% 7%, 72% 50%, 87% 93%, 30% 93%, 10% 50%, 30% 7%); */
+    position: absolute;
+    top: 0;
+    right:0;
+    clip-path: polygon(25% 0%, 100% 0, 100% 100%, 25% 100%, 0% 50%);
+
+
+    background-color: #59b256;
+}
+.i-scroll{
+    width:30px;
+    height: 30px;
+    position: absolute;
+    bottom:20px;
+}
+
+/* mobile */
+@media screen and (max-width:480px) {
+    .i{
+        flex-direction: column;
+        height:auto;
+    }
+    .i-img{
+        top: -50px;
+        right : 0;
+        width: 70%;
+        height: 140%;
+        display: none;
+    }
+    .i-left-wrapper{
+        padding-left: auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .i-desc{
+        display: none;
+    }
+}

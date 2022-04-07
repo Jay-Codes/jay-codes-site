@@ -1,0 +1,101 @@
+.c{
+    height: 100vh;
+    position: relative;
+}
+.c-bg{
+    width: 20px;
+    height: 100%;
+    background-color: #59b256;
+    position:absolute;
+}
+.c-wrapper{
+    padding: 50px;
+    display: flex;
+}
+.c-left{
+    flex:1;
+}
+.c-right{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.c-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+.c-info-item{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+    font-weight: 400;
+    /* justify-content: space-between; */
+}
+.c-title{
+    font-size: 60px;
+    width: 80%;
+}
+.c-desc{
+
+}
+input {
+    border: none;
+    border-bottom: 1px black solid;
+    width: 50%;
+    height:50px;
+    margin:10px 0;
+    font-size: 17px;
+    padding-left: 10px;
+}
+textarea{
+    width:100%;
+    margin:10px 0;
+    font-size: 17px;
+    padding-left: 10px;
+}
+button{
+    border: none;
+    padding: 15px;
+    background-color: #59b256;
+    color:white;
+}
+form{
+    margin-top: 20px;
+    font-weight: 500;
+    cursor:pointer;
+}
+.thankyou{
+    color:#59b256;
+}
+@media screen and (max-width : 480px) {
+    .c{
+        height: auto;
+    }
+    .c-wrapper{
+        flex-direction : column;
+        padding: 0 50px;
+    }
+    input {
+        width: 100%;
+    }
+    .c-title{
+        font-size: 30px;
+    }
+    .c-info-item{
+        margin: 20px 0;
+        width: 100%;
+    }
+    form {
+        margin-top: 0;
+        display :flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    button{
+        margin-top: 10px;
+    }
+}
